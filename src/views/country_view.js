@@ -22,6 +22,21 @@ CountryView.prototype.render = function (country) {
   const flag = document.createElement('img');
   flag.src = country.flag;
   this.container.appendChild(flag);
+
+  const regionHeader = document.createElement('h3');
+  const region = document.createElement('p');
+  region.textContent = `${country.region}`;
+  regionHeader.textContent = "Region";
+  this.container.appendChild(regionHeader);
+  this.container.appendChild(region);
+
+  const currencyHeader = document.createElement('h3');
+  const currency = document.createElement('p');
+  currency.textContent = `${country.currencies[0].name}`;
+  currencyHeader.textContent = "Currency";
+  this.container.appendChild(currencyHeader);
+  this.container.appendChild(currency);
+
 };
 
 
